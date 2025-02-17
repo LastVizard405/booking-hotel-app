@@ -27,18 +27,14 @@ const HotelDetailsPage = () => {
 				<>
 					<div className="details__title-container">
 						<h2 className="details__title">{hotel?.name}</h2>
-						<div className="details__stars">
-							{hotel?.rating && <StarGenerator rating={hotel?.rating} />}
-						</div>
+						<div className="details__stars">{hotel?.rating && <StarGenerator rating={hotel?.rating} />}</div>
 						<span className="details__rating">{hotel?.rating}</span>
 					</div>
 					<div className="details__location-container flex-container">
 						<div className="details__slider">
 							<SliderImgHotels hotel={hotel} />
 						</div>
-						<div className="details__map">
-							{hotel && <HotelMap lat={hotel.lat} lon={hotel.lon} />}
-						</div>
+						<div className="details__map">{hotel && <HotelMap lat={hotel.lat} lon={hotel.lon} />}</div>
 					</div>
 					<div className="details__city">
 						{hotel?.city.name}, {hotel?.city.country}
@@ -53,8 +49,7 @@ const HotelDetailsPage = () => {
 							<FormReservations hotelId={hotel?.id} />
 						) : (
 							<p>
-								If you want to make a reservation, please{' '}
-								<Link to={'/login'}>Login</Link>
+								If you want to make a reservation, please <Link to={'/login'}>Login</Link>
 							</p>
 						)}
 					</section>

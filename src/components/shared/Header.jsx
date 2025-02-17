@@ -19,8 +19,8 @@ const Header = () => {
 			<DarkMode />
 			<h1 onClick={closeMenu} className="header__logo">
 				<Link to="/">
-					Academlo
-					<span className="header__hotels">Hotels</span>
+					Heaven's Pass
+					<span className="header__hotels"> Hotels</span>
 				</Link>
 			</h1>
 			<div onClick={handleMenu} className="header__menu">
